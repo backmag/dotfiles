@@ -3,6 +3,7 @@
 This repository contains my personal configuration files (dotfiles) for various development tools and environments. These files are primarily used in a Windows environment with WSL.
 
 The reasoning is to keep dotfiles on the Windows filesystem, and create symbolic links to ~ on WSL1 and WSL2.
+The setup is in large parts based on this [blog post](https://hashnode.com/post/customize-hyper-terminal-in-windows-using-oh-my-zsh-and-powerline-fonts-ckggfmcwc00brrls1f8va9jfl).
 
 ## Structure
 
