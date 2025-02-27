@@ -12,6 +12,7 @@ The repository contains the following configuration files:
 - `.bashrc` - Bash shell configuration
 - `.zshrc` - Zsh shell configuration
 - `.profile` - Profile configuration shared between shells
+- `.config/nvim` - Configuration for neovim, using lazy
 
 ## Setup Instructions
 
@@ -29,5 +30,47 @@ To use these dotfiles on a new system:
    ln -s /path/to/repo/.bashrc ~/.bashrc
    ln -s /path/to/repo/.gitconfig ~/.gitconfig
    ln -s /path/to/repo/.profile ~/.profile
+   ln -s /path/to/repo/.config/nvim ~/.config/nvim
    ```
 
+3. Download/install other dependencies in the WSL home path. Here's a list that's probably not exhaustive: 
+- Hyper
+Install from somewhere reasonable, change `%USERPROFILE%/.hyper.js` to `shell: 'C:\\Windows\\System32\\bash.exe'`.
+
+- Fzf
+
+Install to `~` by:
+```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+/.fzf/install
+```
+
+- Zsh
+
+```bash
+sudo apt-get install zsh
+```
+
+- Oh-my-zsh
+
+Install to `~` by: 
+
+```bash
+curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash 
+```
+
+- Neovim
+
+```bash
+# Clone repo
+git clone https://github.com/neovim/neovim.git
+# Install dependencies needed to make make
+sudo apt-get install ninja-build gettext cmake curl build-essential
+# Build makefile
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+# Install neovim
+sudo make install
+# Create empty config-folder
+mkdir .config
+# Create symlink as described under setup instructions
+```
