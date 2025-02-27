@@ -1,0 +1,25 @@
+[user]
+    name = Gustaf Backman
+    email = gustaf.backman@spp.se
+
+[alias]
+    lg = log --oneline --graph --decorate
+    fp = fetch --prune
+    st = status
+    ap = add --patch
+    rp = restore --patch
+    br = branch
+    ci = commit
+    pfwl = push --force-with-lease
+    cim = commit -m
+    ria = rebase --interactive --autosquash
+    ri = rebase --interactive
+    cif = commit --fixup
+    cia = commit --amend
+    cian = commit --amend --no-edit
+    co = checkout
+    cob = checkout -b
+[core]
+	editor = nvim
+[url "git@github.com:"]
+	insteadOf = https://github.com/
