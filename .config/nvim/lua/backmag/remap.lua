@@ -30,8 +30,9 @@ end
 
 -- Run current file as a csharp script
 local function run_current_csharp_file()
-    local file = vim.fn.expand('%')
-    vim.cmd('!dotnet-script.exe ' .. file)
+    local file = vim.fn.expand('%:p')
+    local win_path = vim.fn.system('wslpath -w "' .. file .. '"'):gsub('\n', '')
+    vim.cmd('!dotnet-script.exe "' .. win_path .. '"')
 end
 
 --run python
