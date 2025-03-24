@@ -60,6 +60,15 @@ Install to `~` by:
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash 
 ```
 
+Some plugins need to be fetched to be used. 
+
+```bash
+# Clone the repositories into your Oh My Zsh plugins directory
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
 - Neovim
 
 ```bash
