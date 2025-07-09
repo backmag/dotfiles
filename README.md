@@ -42,6 +42,25 @@ To use these dotfiles on a new system:
 
 Install from somewhere reasonable, change `%USERPROFILE%/.hyper.js` to `shell: 'C:\\Windows\\System32\\bash.exe'`.
 
+- Nerd Fonts
+
+Install something like `MesloLG Nerd Font` from `https://www.nerdfonts.com/font-downloads`.
+Unzip, right click "MesloLGSNerdFont-Regular" -> Install.
+Update the hyper configuration file to use the font.
+
+```fontFamily: 'MesloLGS Nerd Font Regular'```
+
+- p10k
+
+Install from git. Check the [repository](https://github.com/romkatv/powerlevel10k) for details, but something like this.
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+A configuration routine should be launched, but you can run this later with `p10k configure`.
+
 - Fzf
 
 Install to `~` by:
