@@ -38,11 +38,31 @@ To use these dotfiles on a new system:
 
 3. Download/install other dependencies in the WSL home path. Here's a list that's probably not exhaustive: 
 
-- Hyper
+## Hyper
 
 Install from somewhere reasonable, change `%USERPROFILE%/.hyper.js` to `shell: 'C:\\Windows\\System32\\bash.exe'`.
 
-- Nerd Fonts
+### Changes to .hyper.js
+
+Edit the config file by `Ctrl + ,`. 
+Change the following properties from
+ ```json
+ shell: '',
+ shellArgs: '--login',
+ fontFamily: '... a bunch of fonts'
+ ```
+
+to
+
+ ```json
+ shell: 'C:\\Windows\\System32\\bash.exe',
+ shellArgs: '~',
+ fontFamily: 'MesloLGS Nerd Font Regular'
+ ```
+
+ The `fontFamily` should be changed after installing nerd fonts and p10k.
+
+## Nerd Fonts
 
 Install something like `MesloLG Nerd Font` from `https://www.nerdfonts.com/font-downloads`.
 Unzip, right click "MesloLGSNerdFont-Regular" -> Install.
@@ -50,7 +70,7 @@ Update the hyper configuration file to use the font.
 
 ```fontFamily: 'MesloLGS Nerd Font Regular'```
 
-- p10k
+## p10k
 
 Install from git. Check the [repository](https://github.com/romkatv/powerlevel10k) for details, but something like this.
 
@@ -61,7 +81,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 A configuration routine should be launched, but you can run this later with `p10k configure`.
 
-- Fzf
+## Fzf
 
 Install to `~` by:
 ```bash
@@ -69,17 +89,17 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 /.fzf/install
 ```
 
-- Ripgrep
+## Ripgrep
 
 Just install by `sudo apt-get ripgrep`.
 
-- Zsh
+## Zsh
 
 ```bash
 sudo apt-get install zsh
 ```
 
-- Oh-my-zsh
+## Oh-my-zsh
 
 Install to `~` by: 
 
@@ -96,7 +116,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-- Neovim
+## Neovim
 
 ```bash
 # Clone repo
