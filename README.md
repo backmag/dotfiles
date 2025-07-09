@@ -15,6 +15,8 @@ The repository contains the following configuration files:
 - `.profile` - Profile configuration shared between shells
 - `.config/nvim` - Configuration for neovim, using lazy
 
+The terminal setup is that hyper launches bash.exe, which then starts zsh. The .zshrc-file is configured to use oh-my-zsh.
+
 ## Setup Instructions
 
 To use these dotfiles on a new system:
@@ -35,7 +37,9 @@ To use these dotfiles on a new system:
    ```
 
 3. Download/install other dependencies in the WSL home path. Here's a list that's probably not exhaustive: 
+
 - Hyper
+
 Install from somewhere reasonable, change `%USERPROFILE%/.hyper.js` to `shell: 'C:\\Windows\\System32\\bash.exe'`.
 
 - Fzf
@@ -45,6 +49,10 @@ Install to `~` by:
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 /.fzf/install
 ```
+
+- Ripgrep
+
+Just install by `sudo apt-get ripgrep`.
 
 - Zsh
 
@@ -74,6 +82,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 ```bash
 # Clone repo
 git clone https://github.com/neovim/neovim.git
+cd neovim
+
 # Install dependencies needed to make make
 sudo apt-get install ninja-build gettext cmake curl build-essential
 # Build makefile
