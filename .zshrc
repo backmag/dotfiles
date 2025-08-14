@@ -109,7 +109,6 @@ source $ZSH/oh-my-zsh.sh
 function clip { "$1" | clip.exe; }
 alias clip=clip.exe
 alias vim=nvim
-alias dotnet=dotnet.exe
 alias gh=gh.exe
 
 
