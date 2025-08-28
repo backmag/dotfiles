@@ -14,6 +14,7 @@ The repository contains the following configuration files:
 - `.zshrc` - Zsh shell configuration
 - `.profile` - Profile configuration shared between shells
 - `.config/nvim` - Configuration for neovim, using lazy
+- `ps_profile.ps1` - Configiration for PowerShell 7 (Not for WSL)
 
 The terminal setup is that hyper launches bash.exe, which then starts zsh. The .zshrc-file is configured to use oh-my-zsh.
 
