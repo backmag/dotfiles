@@ -9,9 +9,6 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
--- Add a colored bar at line length 80
--- vim.opt.colorcolumn = "80"
-
 vim.opt.clipboard = "unnamedplus"
 
 if vim.fn.has("wsl") == 1 then

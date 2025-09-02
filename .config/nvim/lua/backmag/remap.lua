@@ -15,6 +15,12 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+vim.keymap.set("v", "y", function()
+  local cursor_pos = vim.fn.getpos(".")
+  vim.cmd('normal! y')
+  vim.fn.setpos(".", cursor_pos)
+end, {desc = "Yank without moving cursor"})
+
 -- Remap markdown preview
 vim.keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>', { noremap = true })
 
