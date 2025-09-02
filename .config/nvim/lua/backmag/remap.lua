@@ -33,13 +33,7 @@ vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
 -- Custom function to show hover info if available, otherwise show diagnostics
 vim.keymap.set("n", "K", function()
-  -- Try to show hover information first
-  local _, has_hover = pcall(vim.lsp.buf.hover)
-
-  -- If hover doesn't show anything (or errors), show diagnostic float
-  if not has_hover then
-    vim.diagnostic.open_float()
-  end
+  vim.lsp.buf.hover()
 end, { desc = "Show documentation or diagnostics under cursor" })
 
 -- Run current file as a python script
