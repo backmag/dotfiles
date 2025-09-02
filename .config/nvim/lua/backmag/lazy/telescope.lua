@@ -8,7 +8,14 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = function()
-      require("telescope").setup({})
+      require("telescope").setup({
+        pickers = {
+          find_files = {
+            hidden = true,
+            no_ignore = true, -- ignore .gitignore
+          }
+        }
+      })
 
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
