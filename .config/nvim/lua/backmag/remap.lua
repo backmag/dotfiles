@@ -28,7 +28,9 @@ vim.keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>nt', ':Neotree filesystem reveal<CR>')
 
 -- Remove highlighting
-vim.keymap.set('n', '<leader>no', ':noh<CR>')
+vim.keymap.set('n', '<leader>no', function()
+  vim.cmd.nohlsearch()
+end)
 
 -- Format document with LSP
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = "Format with LSP" })
