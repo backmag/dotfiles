@@ -25,7 +25,10 @@ end, {desc = "Yank without moving cursor"})
 vim.keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>', { noremap = true })
 
 -- Remap to open Neotree
-vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal<CR>')
+vim.keymap.set('n', '<leader>nt', ':Neotree filesystem reveal<CR>')
+
+-- Remove highlighting
+vim.keymap.set('n', '<leader>no', ':noh<CR>')
 
 -- Format document with LSP
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = "Format with LSP" })
