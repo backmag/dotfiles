@@ -56,7 +56,13 @@ end
 -- Run current file as a csharp script
 local function run_current_csharp_file()
   local file = vim.fn.expand('%:p')
-  local win_path = vim.fn.system('wslpath -w "' .. file .. '"'):gsub('\n', '')
+  local win_path
+
+  if _G.is_windows then
+    win_path = file
+  else
+    win_path = vim.fn.system('wslpath -w "' .. file .. '"'):gsub('\n', '')
+  end
   vim.cmd('!dotnet-script.exe "' .. win_path .. '"')
 end
 
