@@ -17,5 +17,9 @@ Set-PSReadLineOption -PredictionSource History
 Set-Alias vim nvim
 Set-Alias l ls
 
+$env:EDITOR = "nvim"
+$env:VISUAL = "nvim"
+
+
 function .. { Set-Location .. }
 function ... { Set-Location ../.. }
