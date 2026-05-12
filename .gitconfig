@@ -19,6 +19,7 @@
     cian = commit --amend --no-edit
     co = checkout
     cob = checkout -b
+    wt = worktree
 [core]
 	editor = nvim
 [url "git@github.com:"]
