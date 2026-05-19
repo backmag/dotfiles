@@ -34,6 +34,7 @@ To use these dotfiles on a new system:
    ln -s /path/to/repo/.bashrc ~/.bashrc
    ln -s /path/to/repo/.gitconfig ~/.gitconfig
    ln -s /path/to/repo/.profile ~/.profile
+   ln -s /path/to/repo/.tmux.conf ~/.tmux.conf
    ln -s /path/to/repo/.config/nvim ~/.config/nvim
    ```
 
