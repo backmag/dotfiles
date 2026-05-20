@@ -61,7 +61,7 @@
           "type": "go"
         },
         {
-          "background": "#4063D8",
+          "background": "#6c8eef",
           "foreground": "#111111",
           "powerline_symbol": "\ue0b0",
           "properties": {
@@ -135,10 +135,10 @@
     {
       "segments": [
         {
-          "background": "#0077c2",
+          "background": "#61afef",
           "foreground": "#ffffff",
           "style": "plain",
-          "template": "<#0077c2,transparent>\ue0b6</> \uf489 {{ .Name }} <transparent,#0077c2>\ue0b2</>",
+          "template": "<#61afef,transparent>\ue0b6</> \uf489 {{ .Name }} <transparent,#61afef>\ue0b2</>",
           "type": "shell"
         },
         {
