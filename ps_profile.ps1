@@ -12,6 +12,7 @@ Set-PsFzfOption -PSReanlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Use the history as a cheap autocomplete option
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineKeyHandler -Key Ctrl+e -Function AcceptSuggestion
 
 # Aliases
 Set-Alias vim nvim
