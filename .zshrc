@@ -109,11 +109,12 @@ source $ZSH/oh-my-zsh.sh
 function clip { "$1" | clip.exe; }
 alias clip=clip.exe
 alias vim=nvim
-alias gh=gh.exe
 
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
@@ -157,3 +158,5 @@ towsl2() {
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
