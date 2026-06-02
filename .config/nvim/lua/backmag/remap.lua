@@ -24,8 +24,15 @@ end, {desc = "Yank without moving cursor"})
 -- Remap markdown preview
 vim.keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>', { noremap = true })
 
--- Remap to open Neotree
-vim.keymap.set('n', '<leader>nt', ':Neotree filesystem reveal<CR>')
+-- Remap to focus Neo-tree (or go back to previous window if already in Neo-tree)
+vim.keymap.set('n', '<leader>nt', function()
+  if vim.bo.filetype == 'neo-tree' then
+    vim.cmd('wincmd p')
+    return
+  end
+
+  vim.cmd('Neotree filesystem reveal focus')
+end, { desc = 'Focus Neo-tree or return to previous window' })
 
 -- Remove highlighting
 vim.keymap.set('n', '<leader>no', function()
