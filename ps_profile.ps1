@@ -18,6 +18,10 @@ Set-PSReadLineKeyHandler -Key Ctrl+e -Function AcceptSuggestion
 Set-Alias vim nvim
 Set-Alias l ls
 
+function dco {
+  docker compose @args
+}
+
 $env:EDITOR = "nvim"
 $env:VISUAL = "nvim"
 
